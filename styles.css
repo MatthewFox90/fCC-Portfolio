@@ -1,0 +1,248 @@
+:root {
+  --viva-magenta: #bb2649;
+  --greenery: #30c5a2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  position: fixed;
+  background-color: var(--viva-magenta);
+  color: var(--greenery);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  z-index: 1;
+}
+
+#navbar > h1 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  width: 70%;
+  margin-left: 25px;
+}
+
+#navbar > #navbar-links {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#navbar > #navbar-links > span {
+  margin: 0 25px;
+}
+
+#navbar > #navbar-links > span > a {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--greenery);
+}
+
+#navbar > #navbar-links > span > a:hover {
+  text-decoration: underline;
+}
+
+#welcome-section {
+  width: 100%;
+  padding-top: 80px;
+  height: 100vh;
+  background-color: var(--greenery);
+  position: relative;
+}
+
+#welcome-section > #hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#welcome-section > #hero > h1 {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--viva-magenta);
+}
+
+#welcome-section > #hero > p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+#projects {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: var(--viva-magenta);
+  color: var(--greenery);
+  position: relative;
+}
+
+#projects > #projects-container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#projects > #projects-container > h1,
+#contacts > #contacts-container > h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 30px 0;
+}
+
+#projects > #projects-container > #projects-grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#projects > #projects-container > #projects-grid > .project-tile {
+  height: calc((23.3vw - 40px) * 1.15);
+  margin: 20px;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > .project-image {
+  height: 85%;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > .project-name {
+  height: 15%;
+  color: var(--viva-magenta);
+  font-size: 2.4rem;
+  font-weight: 500;
+  padding: 10px 0;
+  background-color: var(--greenery);
+  position: relative;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > .project-name > span {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-1 {
+  background-image: url('https://i.ibb.co/cC27Pv4/Schermata-del-2023-01-10-04-26-11.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-2 {
+  background-image: url('https://i.ibb.co/Wvt1Mfw/Schermata-del-2023-01-10-04-26-25.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-3 {
+  background-image: url('https://i.ibb.co/KsZPKMD/Schermata-del-2023-01-10-04-26-31.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-4 {
+  background-image: url('https://i.ibb.co/dBYmk9R/Schermata-del-2023-01-10-04-26-36.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-5 {
+  background-image: url('https://i.ibb.co/W2J2n3c/Schermata-del-2023-01-10-04-26-50.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile > #project-image-6 {
+  background-image: url('https://i.ibb.co/9T5t01Q/Schermata-del-2023-01-10-04-26-54.png');
+  background-size: cover;
+}
+
+#projects > #projects-container > #projects-grid > .project-tile:hover > .project-name > span::before {
+  content: '< ';
+}
+
+#projects > #projects-container > #projects-grid > .project-tile:hover > .project-name > span::after {
+  content: ' />';
+}
+
+#projects > #projects-container > #projects-grid > .project-tile:hover {
+  box-shadow: 0 0 30px 10px var(--greenery);
+}
+
+#contacts {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: var(--greenery);
+  color: var(--viva-magenta);
+  position: relative;
+}
+
+#contacts > #contacts-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#contacts > #contacts-container > #contacts-list {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(7, 150px);
+}
+
+#contacts > #contacts-container > #contacts-list > a {
+  display: grid;
+  grid-template-rows: 3vw 1fr;
+  justify-items: center;
+  align-items: center;
+  height: 100px;
+}
+
+#contacts > #contacts-container > #contacts-list > #profile-link {
+  grid-column: 3 / 4;
+}
+
+#contacts > #contacts-container > #contacts-list > #github-link {
+  grid-column: 5 / 6;
+}
+
+#contacts > #contacts-container > #contacts-list > a > p {
+  font-size: 1.6rem;
+  color: #000000;
+}
+
+#contacts > #contacts-container > #contacts-list > a:hover > p {
+  color: var(--viva-magenta);
+  font-weight: 600;
+}
+
+#contacts > #contacts-container > #contacts-list > a > img {
+  width: 60px;
+  height: 60px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
